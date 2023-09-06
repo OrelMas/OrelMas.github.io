@@ -6,7 +6,7 @@ var Perche = "Poisson"
 // (Chaîne de caractère)
 let NombreStagiaire = 10
 // J'ai défini une variable avec le nombreStagiaire
-// Et je lui ai donné comme donnée le nbre 10
+// Et je lui ai donné comme donnée le nombre 10
 // J'ai défini une variable de type "int" (nombre entier)
 var heure = 14.31
 // J'ai créé une variable avec le nom heure
@@ -46,7 +46,10 @@ function horloge() {
     }
 
 }
-setInterval(horloge, 1000)
+
+
+
+//setInterval(horloge, 1000)
 
 
 // Je voudrais un compte à rebours qui commence à 50
