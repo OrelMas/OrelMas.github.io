@@ -1,8 +1,85 @@
 tr, td, th, table {
     border: 1px solid black;
+    border-radius: 15px;
+    border-spacing: 0px;
+
 }
+
 
 tr td[colspan="2"] {
     text-align: center;
 }
+/* Je choisis le troisième enfant de tr */
+tr:nth-child(3)    {
+    background-color: brown;
+}
 
+
+
+.Bonjour tr td{
+    background-color: aquamarine;
+}
+
+table{
+    border-radius: 50%;
+}
+
+
+#animal:hover {
+    cursor: pointer;
+}
+/*Je selectionne tout les input de
+type submit et de type reset. */
+
+input  
+       
+ [type="Submit"][value="Submit"],[type="Reset"]{
+
+    font-size: 1.7em;
+    border-radius: 25%;
+    
+}
+ 
+#message {
+    resize: none;
+    /* Je retire la possibilité de pouvoir redéfinir la taille du textearea*/
+}
+    /* Je crée une animation qui se nomme animationimg au début elle va transformer scaleX en 1
+    et à la fin elle va transformer scaleX en -1*/
+    @keyframes animationimg{
+        0% {
+            left: 0%;
+            transform: scaleX(-1);
+        }
+        50% {
+            left: 55%;
+            transform: scaleX(1);
+
+        }
+        100%{left: 0%;
+            transform: scaleX(-1);
+
+        }
+    }
+
+
+img {
+    position: relative;
+    border: 3px dashed gray;
+    border-radius: 25px;
+    opacity: 0.6;
+    width: 50%; 
+    /*height:auto; max-width: 100%;Je rend mon image recursive/Responsive*/
+    filter: blur(0.5px);
+    filter: contrast(50%);
+    animation: animationimg 10s ease-in infinite;
+    /* Je dit que l'élément img joue l'animation animationimg qu'elle doit 
+    durer 1.5s en fonctionnement en ease-in et elle se joue un nombre infini de fois*/
+}
+
+img:hover {
+
+    transform: scaleX(-1); /* L'img se retourne*/
+
+
+}
