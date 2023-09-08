@@ -208,8 +208,58 @@
 
 ?>
 
-<form action=""></form>
+<form action="" method="post">
 
+<pre>
+        <h1>Register</h1>
+        <label for="firstname">First name: </label>
+        <br>
+        <input type="text" name="firstname" id="firstname">
+        <br>
+        <label for="lastname">Last name : </label>
+        <input type="text" name="lastname" id="lastname">
+        <br>
+        <label for="e-mail">Email : </label>
+        <br>
+        <input type="e-mail" name="e-mail" id="e-mail">
+        <br>
+        <label for="password">Password : </label>
+        <input type="password"name="password" id="password">
+        <br>   
+        <label for="passwordconfirm ">Confirm password : </label>
+        <input type="password" name="password" id="password">
+    </pre>
+        <label for="gender">Gender:</label for>
+       <br>
+        <input type="radio" name="gender" id="male" value="male">        
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>       
+        <input type="radio" name="gender" id="others" value="others">
+        <label for="others">Other</label>       
+<br><br>
+        <input type="submit" value="Submit">
+    </form>
 
+    <?php
+    // Si method post est rentré dans le formulaire il faut utiliser
+    // $_POST
+    // Sinon si la method get est rentrée dans le formulaire il faut utiliser
+    // $_GET
+    // La fonction isset sert à regarder si la variable qui lui est donnée est 
+    // bien définie, dans ce cas elle regarde si la variable $_POST est définie
+
+    if (isset($_POST) && !empty($_POST)) {  // $_GET
+        echo '<pre>'; var_dump($_POST); echo'</pre>';
+        echo $_POST['firstname'];
+        // Sha1 Hash le mot c à dire
+        // le complexifie et le rend illisible
+        // sha1 / md5
+        echo sha1($_POST['password']) . "<br>";
+        echo md5($_POST['password']);
+    }
+
+    ?>
+    <br><br><br><br><br><br><br>
 </body>
 </html>
