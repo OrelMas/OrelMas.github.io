@@ -1,3 +1,7 @@
+<?php
+// Quand le fichier est lu on veux que le fichier db sois lu lui aussi
+require_once('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +9,8 @@
     <title>Cours PHP</title>
     </head>
 <body>
-
-    <?php 
+<?php
+   
     echo "<p class ='test'>Bonjour<p>"; //echo est la fonction afficher qlq chose
     // J'affiche Bonjour sur ma page dans une balise p avec comme
     // classe 'test'
@@ -190,7 +194,12 @@
         echo"<p> Tu es basique donc tu es nul</p>";
     */
 // Correction
-
+if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
+        echo " <p>Tu es un tronc ! </p>";
+    else if($tab_exo['bras'])
+        echo " <p>Pas de bras pas de chocolat! </p>";
+    else
+    echo " <p> Tu es basique donc tu es nul</p> ! ";
     $tab_exo = [
         "bras" => false, // En changeant par true
         "jambe"=> 0 // En changeant par 2
@@ -199,16 +208,11 @@
 // Exemple : si bras est égal à vrai et que je fait
 // différent de il sera égal à faux
 
-    if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
-        echo " <p>Tu es un tronc ! </p>";
-    else if($tab_exo['bras'])
-        echo " <p>Pas de bras pas de chocolat! </p>";
-    else
-    echo " <p> Tu es basique donc tu es nul</p> ! ";
+    
 
 ?>
 
-<form action="" method="post">
+<form action="validation" method="post">
 
 <pre>
         <h1>Register</h1>
@@ -221,7 +225,7 @@
         <br>
         <label for="e-mail">Email : </label>
         <br>
-        <input type="e-mail" name="e-mail" id="e-mail">
+        <input type="e-mail" name="email" id="e-mail">
         <br>
         <label for="password">Password : </label>
         <input type="password"name="password" id="password">
@@ -248,18 +252,54 @@
     // $_GET
     // La fonction isset sert à regarder si la variable qui lui est donnée est 
     // bien définie, dans ce cas elle regarde si la variable $_POST est définie
+    
+    
+    // Je prepare ma commande
+    $select =$bdd->prepare('SELECT * FROM utilisateur WHERE gender = ?;');
+    // Je l'éxécute en lui donnant une valeur à la place des ?
+    $select->execute(array("male"));
+    // Je recupere tout ce que me renvoie ma commande
+    $total = $select->fetchAll(PDO::FETCH_ASSOC);
 
-    if (isset($_POST) && !empty($_POST)) {  // $_GET
-        echo '<pre>'; var_dump($_POST); echo'</pre>';
-        echo $_POST['firstname'];
-        // Sha1 Hash le mot c à dire
-        // le complexifie et le rend illisible
-        // sha1 / md5
-        echo sha1($_POST['password']) . "<br>";
-        echo md5($_POST['password']);
-    }
+    // Je l'affiche 
+    echo'<pre>';
+    var_dump($total);
+    echo'<pre>';
 
-    ?>
-    <br><br><br><br><br><br><br>
+    echo $total[2]['gender'];
+
+?>
+   
+   <form action="" method="post">
+    <fieldset>
+   <label for="your name">Your name </label>
+   <input type="text" name="your name" id="your name">
+
+   <label for="e-mail">Your mail  </label>
+   <input type="e-mail" name="e-mail" id="e-mail">
+
+   <label for="text">Your message</label>
+   <input type="text" name="your message" id="your message">
+
+   <textarea name="message" placeholder="Je veux un message" id="message" cols="24" rows="8">
+   </textarea>
+
+   <label for="number"> Give me your number !</label>
+
+   <input type="number" name="number" id="number">
+
+    <input type="submit" value="Envoyer">
+    </fieldset>
+   </form>
+
+
+   <?php
+    if (isset($_POST) && !empty($_POST)) {
+        settype($_POST['number'],'integer');
+        $newmessage = $bdd->prepare('INSERT INTO messages(name,mail,message,number)VALUES(?, ?, ?, ?)');
+        $newmessage->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']));
+}
+?>
 </body>
+
 </html>

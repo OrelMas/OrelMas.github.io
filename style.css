@@ -83,3 +83,45 @@ img:hover {
 
 
 }
+.test {
+
+    color:blue;
+}
+
+    fieldset {
+        width: 10px;
+}
+
+
+
+.conteneur {
+    background-color:black;
+    height: 200%;
+    width: 100%; /*Prend toute la largeur de la page*/
+    display: flex;/*L'afficher se met en mode flex*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.rouge {
+    background-color: red ;
+    width: 25%; /*largeur*/
+    height: 75px; /*hauteur*/
+
+}
+
+.vert{
+    background-color: green;
+    width: 25%; /*largeur*/
+    height: 75px; /*hauteur*/
+
+
+}
+.orange {
+    background-color: orange;
+    width: 25%;/*largeur*/
+    height: 75px;/*hauteur*/
+
+}
