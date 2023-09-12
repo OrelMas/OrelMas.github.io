@@ -27,6 +27,7 @@ let Phrase = "J'aime l' " + Autruche + " mais pas les " + Perche
 // et les variables
 var calcul = heure + NombreStagiaire // / * + - %
 // 14.31 + 10
+
 console.log(Phrase)
 console.log(calcul)
 // Permet d'afficher une valeur donnée dans la console du navigateur 
@@ -83,8 +84,10 @@ var tab = [
 // "bonjour"
 // 7,5
 // null
-console.log(tab[1])// On affiche la valeur qui se trouve à la position 1 qui est "bonjour"
-console.log(tab[3])// On affiche la valeur qui se trouve à la position 3 qui est "null"
+console.log(tab[1])
+// On affiche la valeur qui se trouve à la position 1 qui est "bonjour"
+console.log(tab[3])
+// On affiche la valeur qui se trouve à la position 3 qui est "null"
 
 // Je voudrait un tableau qui se nomme Chmilblik qui comporte
 // 5 valeurs de type string et 5 valeur de type int ou float
@@ -110,16 +113,18 @@ let Chmilblik = [
 // addEventListener créer une écoute d'évènement
 let animal = "Autruche"
 let temp = ""
+console.log(document.getElementById('animal'))
 document.getElementById('animal').addEventListener('click',function() {
     // Je regarde le texte qui se trouve dans cet élément
     temp = document.getElementById('animal').innerHTML
     // Je modifie le texte qui se trouve dans cet élément par la valeur
     // de la variable animal
             document.getElementById('animal').innerHTML = animal
+            document.getElementById('animal').style.fontSize = '10em'
             animal = temp
 })
     
-while (false) {} // Tandis que ce qu'il se trouve dans les paramètres est vrai
+while (false) {} // Tandis que ce qu'il se trouve dans les parenthèses est vrai
 // elle tourne
 
 for(var i=0; i <=10; i++){
@@ -131,6 +136,9 @@ for(var i=0; i <=10; i++){
 // La boucle tourne jusqu'à la taille du tableau 
 for(var i=0; i < Chmilblik.length; i++) {
     console.log(Chmilblik[i])
+    if (i == 3) {
+        break
+}
 }
 
 do {
@@ -152,7 +160,7 @@ for (index in tab_assoc) {
     console.log(index)
 }
 
-for(var i=10; i <= 0; i--) {
+for(var i=10; i >= 0; i--) {
     //console.log("Il reste" + i + "lignes à écrire")
     //console.log("Il reste", i , "lignes à écrire")
     console.log(`Il reste ${i} ligne ${i <= 1 ?' ':'s'} à écrire`)

@@ -1,11 +1,26 @@
+/*Font face sert à rajouter de nouvelles familles d'écriture qui ne sont pas disponible
+Nativement (Sans rien rajouter en plus*/
+    
+
+
+
+
+
+
+
+/* Je prend toutes les balises tr puis td puis th et table et je leur donne des propriétés*/
+
+
 tr, td, th, table {
-    border: 1px solid black;
+    border: 1px solid red;
     border-radius: 15px;
     border-spacing: 0px;
 
 }
 
-
+/*Je selectionne tout les td qui ont le parametre
+colspan=2 dans leur balise
+*/ 
 tr td[colspan="2"] {
     text-align: center;
 }
@@ -24,16 +39,14 @@ table{
     border-radius: 50%;
 }
 
-
+/*Je modifie le curseur que quand l souris passe dessus*/
 #animal:hover {
     cursor: pointer;
 }
 /*Je selectionne tout les input de
 type submit et de type reset. */
 
-input  
-       
- [type="Submit"][value="Submit"],[type="Reset"]{
+input [type="Submit"][value="Submit"],[type="Reset"]{
 
     font-size: 1.7em;
     border-radius: 25%;
@@ -96,32 +109,241 @@ img:hover {
 
 .conteneur {
     background-color:black;
-    height: 200%;
+    height: 600px;
     width: 100%; /*Prend toute la largeur de la page*/
     display: flex;/*L'afficher se met en mode flex*/
-    justify-content: space-evenly;
+    justify-content: space-around;
+    /*justify-content joue avec la largeur quand le flex - direction est en column il joue en hauteur*/
     align-items: center;
+       /*align-items fait la même chose que justify-content mais inversé c a dire qu'il joue avec la hauteur
+    quand flex-direction est en row et en largeur quand il est en column*/
+    /*flex-direction: column;*/
+    align-content: space-around;
+    /*Fait la même chose que align-items mais il gère aussi les multilignes de conteneur*/
     flex-direction: row;
-    
+    flex-wrap: wrap;
+    /* Il sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur quand il 
+    est en mode wrap
+    (Par défaut il est en mode nowrap)
+    */
+
 }
 
 .rouge {
     background-color: red ;
-    width: 25%; /*largeur*/
-    height: 75px; /*hauteur*/
-
+    width: 10%; /*largeur*/
+    height: 100px; /*hauteur*/
+    border: 2px solid white;
 }
 
 .vert{
     background-color: green;
-    width: 25%; /*largeur*/
-    height: 75px; /*hauteur*/
+    width: 10%; /*largeur*/
+    height: 100px; /*hauteur*/
+    border: 2px solid white;
+}
+
+
+.orange {
+    background-color: orange;
+    width: 10%;/*largeur*/
+    height: 100px;/*hauteur*/
+    border: 2px solid white;
+}
+
+/*exercice*/
+
+.grand {
+    background-color: darkgray;
+    width: 75%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.petit {
+    background-color: aquamarine;
+    width: 45%;
+    height: 95%;
+    display: flex;
+    align-items: flex-end;
+
+}
+.petit h1 {
+    color: darkgray;
+    font-size: 3em;
+    margin: 15px;
+    font-family: georgia,"Times New Roman", Time
+
+}
+
+#secondpetit {
+    background-color: transparent;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.moyen {
+    width: 100%;
+    height: 30%;
+    background-color: aquamarine;
+    
+}
+
+.toutpetit {
+    width: 45%;
+    height: 30%;
+    background-color: aquamarine;
 
 
 }
-.orange {
-    background-color: orange;
-    width: 25%;/*largeur*/
-    height: 75px;/*hauteur*/
 
+
+
+/*exercice 2*/
+
+
+
+
+
+.violet     {
+    background-color: violet;
+
+}
+
+.Orange{
+    background-color:orange
+}
+
+
+.bleu {
+    background-color:blue
+
+}
+.red{
+    background-color:red
+}
+
+.flexbox {
+    width: 70%;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexbox h1 {
+    display: block;
+    margin: 2px;
+    font-size: 4em;
+    color: white;
+    font-weight:bolder;
+    
+}
+.cote_gauche    {
+    /*background-color: aqua;*/
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: space-between;
+}
+
+
+
+.long {
+    width: 100%;
+    height: 20%;
+}
+
+.cote_gauche .gauche {
+/* background-color: beige;Temporaire pour */
+    width: 45%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.cote_gauche .droite {
+    width: 45%;
+    height: 75%;
+
+}
+.cote_gauche .gauche .petite {
+    width: 100%;
+    height: 65%;
+}
+
+.cote_gauche .gauche .trespetite {
+    width: 100%;
+    height: 30%;
+
+}
+
+.cote_droit     {
+    /*background-color: aqua;*/
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cote_droit .gauche {
+    /*background-color: beige;*/
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.cote_droit .gauche .petite1 {
+    width: 100%;
+    height: 35%;
+
+}
+.cote_droit .gauche .petite2 {
+    width: 100%;
+    height: 20%;
+
+}
+
+.cote_droit .gauche .petite3{
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .droite {
+   /* background-color: beige;*/
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.cote_droit .droite .petite1 {
+    width: 100%;
+    height: 40%;
+}
+.cote_droit .droite .petite2 {
+    width: 100%;
+    height: 30%;
+
+}
+.cote_droit .droite .petite3 {
+    width: 100%;
+    height: 25%;
+
+}
+.cote_droit .long {
+    height: 30%;
 }

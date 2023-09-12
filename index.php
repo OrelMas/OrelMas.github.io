@@ -3,19 +3,20 @@
 require_once('db.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Cours PHP</title>
+    <link rel="stylesheet" href="./style.css">
     </head>
 <body>
 <?php
-   
     echo "<p class ='test'>Bonjour<p>"; //echo est la fonction afficher qlq chose
     // J'affiche Bonjour sur ma page dans une balise p avec comme
     // classe 'test'
-    echo "<p>" . "Bonjour" . "<p>"; // Les points remplacent les +
-    $cookie = 10; // variable cookie qui contient le nombre 10
+    echo "<p>" . "Bonjour" . "</p>"; // Les points remplacent les +
+    $cookie = 10; // integer variable cookie qui contient le nombre 10
+    // $ = var/let
     // Je définis ma variable avec $ puis
     // je lui donne le nom cookie
     // et je lui rentre la valeur 10
@@ -28,7 +29,7 @@ require_once('db.php');
     String => Chaîne de caractères comme 
         "Bonjour"
         "Je code sur un ordinateur"
-    Booléens =< true (vrai) ou false (faux)
+    Booléens => true (vrai) ou false (faux)
     Array => 
         Indexés
         Associatif
@@ -36,7 +37,9 @@ require_once('db.php');
     */
     echo $phrase;
     echo $titre;
-
+    ?>
+    <br>
+    <?php
     // Les conditions
 
     $condition = true;
@@ -44,7 +47,7 @@ require_once('db.php');
     if ($condition) {
         echo " <br>Je passe ici donc c'est vrai"; // Pour passer à la ligne suivante <br> à l' intérieur
     } else {
-        echo " Je passe par là donc c'est faux";
+        echo "<br>Je passe par là donc c'est faux";
     }
    
     $code = 4227;
@@ -52,19 +55,19 @@ require_once('db.php');
         // === Ca prend en compte que la variable sois égale
         // et du même type
     if ($code == '4227') {
-        
-    echo " Le code est correct";
+        echo "<p>Le code est correct</p>";
     } else {
-    echo " Le code n'est pas correct";
+        echo "<p>Le code n'est pas correct</p>";
     }
 
     $couleur = "gris";
-   
-    if ($couleur == "rouge") {
+        echo "<p>J'ai une autruche de couleur ". $couleur ."</p>";
+
+    if ($couleur == "rouge") { // Si
         echo "<p> J'ai une autruche de couleur rouge</p>";
-    }   else if ($couleur == "bleu") { // Sinon Si
+    }  else if ($couleur == "bleu") { // Sinon Si
         echo " <p> J'ai une autruche de couleur bleue</p>";
-    }   else { // Sinon
+    }  else { // Sinon
         echo"<p> J'ai pas d'autruche</p>";
     }
     
@@ -86,13 +89,14 @@ require_once('db.php');
         case 150:
             echo "<p>Tu es très petit(e)</p>";
             break;
+        case 170:
             echo "<p<Tu a une taille convenable</p>";
             break;
         case 200:
             echo "<p>Bonjour Monsieur !</p>";
             break;
-        default;
-            echo "<p>Tu n'éxiste pas !!</p>";
+        default:
+            echo "Tu n'éxiste pas !!";
             break;    
     }
     
@@ -112,10 +116,12 @@ require_once('db.php');
     echo '</pre>';
     
     $exo = [4, 12, 78, 98, 65];
-    $resultat = 0;
+    
     $resultat = $exo[2] - ($exo[0] * $exo[1]);
     $resultat = ($exo[3] - $exo[4])- ($exo[1] / $exo[0]);
-
+    echo $resultat  ;
+    // 78 - (4 * 12)
+    // (98 - 65) - (12 / 4)
     // La valeur de $resultat doit être égale à 30 en utilisant
     // que les nombres qui se trouvent dans le tableau exo
             
@@ -133,7 +139,6 @@ require_once('db.php');
     // voiture est un index et volkswagen est sa valeur
     // animal est un index et Perroquet est sa valeur
     // Ainsi de suite
-
     $tab_assoc['bras'] = false;
     // J 'ai défini un nouvel index bras avec comme valeur faux
 
@@ -142,8 +147,8 @@ require_once('db.php');
     // Les boucles
 
     // La boucle while
-
-    while(false) {
+    $o = 0;
+    while(true) {
         $o++;
         echo "<p> Je passe dans la boucle while</p>";
         if ($o == 10) {
@@ -179,7 +184,10 @@ require_once('db.php');
     Sinon
         Tu es basique donc tu es nul
     */
-    
+    $tab_exo = [
+            "bras" => true,
+            "jambe" => 2
+        ];
 
     /*$tab_assoc ['ni bras ni jambe'] = false;
     $tab_assoc ['bras'] = 0;
@@ -213,38 +221,36 @@ if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
 ?>
 
 <form action="validation" method="post">
-
-<pre>
-        <h1>Register</h1>
-        <label for="firstname">First name: </label>
-        <br>
+    <pre>
+      
+        <label for="firstname">First Name: </label>
         <input type="text" name="firstname" id="firstname">
         <br>
-        <label for="lastname">Last name : </label>
+        <label for="lastname">Last Name: </label>
         <input type="text" name="lastname" id="lastname">
         <br>
-        <label for="e-mail">Email : </label>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
         <br>
-        <input type="e-mail" name="email" id="e-mail">
-        <br>
-        <label for="password">Password : </label>
-        <input type="password"name="password" id="password">
-        <br>   
-        <label for="passwordconfirm ">Confirm password : </label>
+        <label for="password">Password: </label>
         <input type="password" name="password" id="password">
-    </pre>
-        <label for="gender">Gender:</label for>
-       <br>
-        <input type="radio" name="gender" id="male" value="male">        
-        <label for="male">Male</label>
+        <br>
+        <label for="passwordconfirm">Confirm Password: </label>
+        <input type="password" name="password" id="password">
+        </pre>
+        <label for="gender">Gender: </label>
+        <br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="">Male</label>
         <input type="radio" name="gender" id="female" value="female">
-        <label for="female">Female</label>       
+        <label for="">Female</label>
         <input type="radio" name="gender" id="others" value="others">
-        <label for="others">Other</label>       
-<br><br>
+        <label for="">Others</label>
+        <input type="number" name="number" id="">
+        <br><br>
         <input type="submit" value="Submit">
     </form>
-
+    
     <?php
     // Si method post est rentré dans le formulaire il faut utiliser
     // $_POST
@@ -255,7 +261,7 @@ if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
     
     
     // Je prepare ma commande
-    $select =$bdd->prepare('SELECT * FROM utilisateur WHERE gender = ?;');
+    $select =$bdd->prepare('SELECT * FROM utilisateur WHERE gender=?;');
     // Je l'éxécute en lui donnant une valeur à la place des ?
     $select->execute(array("male"));
     // Je recupere tout ce que me renvoie ma commande
@@ -269,31 +275,29 @@ if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
     echo $total[2]['gender'];
 
 ?>
-   
    <form action="" method="post">
-    <fieldset>
-   <label for="your name">Your name </label>
-   <input type="text" name="your name" id="your name">
-
-   <label for="e-mail">Your mail  </label>
-   <input type="e-mail" name="e-mail" id="e-mail">
-
-   <label for="text">Your message</label>
-   <input type="text" name="your message" id="your message">
-
-   <textarea name="message" placeholder="Je veux un message" id="message" cols="24" rows="8">
-   </textarea>
-
-   <label for="number"> Give me your number !</label>
-
-   <input type="number" name="number" id="number">
-
-    <input type="submit" value="Envoyer">
-    </fieldset>
-   </form>
-
-
-   <?php
+        <fieldset>
+            <label for="name">Your Name:</label>
+            <br>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="mail">Your Mail</label>
+            <br>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <label for="message">Your message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <label for="number">Give me your number</label>
+            <br>
+            <input type="number" name="number" id="number">
+            <br>
+            <input type="submit" value="Envoyer">
+        </fieldset>
+    </form>
+    
+<?php
     if (isset($_POST) && !empty($_POST)) {
         settype($_POST['number'],'integer');
         $newmessage = $bdd->prepare('INSERT INTO messages(name,mail,message,number)VALUES(?, ?, ?, ?)');
@@ -301,5 +305,4 @@ if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
 }
 ?>
 </body>
-
 </html>
