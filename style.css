@@ -1,8 +1,13 @@
 /*Font face sert à rajouter de nouvelles familles d'écriture qui ne sont pas disponible
 Nativement (Sans rien rajouter en plus*/
-    
+    @font-face {
+        font-family: BebasNeue;
+        src: url(./fonts/BebasNeue-Regular.ttf);
+    }
 
-
+    @font-face {
+        font-family: Nabla;
+        src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
 
 
 
@@ -173,7 +178,7 @@ img:hover {
     color: darkgray;
     font-size: 3em;
     margin: 15px;
-    font-family: georgia,"Times New Roman", Time
+    font-family: georgia,"Times New Roman", Time serif
 
 }
 
@@ -240,7 +245,7 @@ img:hover {
     font-size: 4em;
     color: white;
     font-weight:bolder;
-    
+    font-family: Nabla;
 }
 .cote_gauche    {
     /*background-color: aqua;*/
@@ -260,7 +265,7 @@ img:hover {
 }
 
 .cote_gauche .gauche {
-/* background-color: beige;Temporaire pour */
+/* background-color: beige;Temporaire pour être visualisé */
     width: 45%;
     height: 75%;
     display: flex;
@@ -347,3 +352,12 @@ img:hover {
 .cote_droit .long {
     height: 30%;
 }
+
+    }
+
+
+    #minuteur {
+        font-size: 6em;
+        font-family:Nabla;
+        letter-spacing: 10px;
+    }
