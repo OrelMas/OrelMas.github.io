@@ -41,6 +41,7 @@
         `${(heure < 10 ? "0" : "" ) + heure}:${(minute < 10 ? "0" : "" ) + minute }:${(seconde < 10 ? "0" : "" ) + seconde}`
         if (seconde <= 0 && minute <= 0 && heure <= 0 ) return
         
+        
         if (seconde == 0) {
             if (minute > 0) {
                 seconde = 60
