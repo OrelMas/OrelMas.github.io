@@ -8,7 +8,20 @@ Nativement (Sans rien rajouter en plus*/
     @font-face {
         font-family: Nabla;
         src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+    }
 
+    @font-face {
+        font-family: minecraft;
+        src: url(./fonts/Minecrafter.Reg.ttf);
+    }
+    @font-face {
+        font-family: doctor;
+        src: url(./fonts/Doctor\ Glitch.otf);
+    }
+    @font-face {
+        font-family: keyboard;
+        src: url(./fonts/212\ Keyboard.otf )
+    }
 
 
 
@@ -353,14 +366,56 @@ img:hover {
     height: 30%;
 }
 
-    }
-
+    
 
     #minuteur {
-        font-size: 6em;
-        font-family:Nabla;
         letter-spacing: 10px;
+        font-size: 9em;
+        position: absolute;
+        height: 116px;
+        left: 50%;
+        transform: translateX(-50%);
 
-
-        
     }
+
+
+    tr, td, th, table {
+        border: 1px solid red;
+        border-radius: 15px;
+        border-spacing: 0px;
+    
+    }
+
+
+
+
+
+.Container {
+    font-family: 'Times New Roman', Times, serif;
+    border: solid black;
+    background-color:rgb(214, 187, 187);
+    opacity: 40%;
+    height: 150px;
+    width: 150px;
+    
+}
+
+
+
+
+
+.ecran  {
+
+    
+}
+
+.touches    {
+
+    
+    border-color: black;
+    align-items: stretch;
+
+
+
+
+}
