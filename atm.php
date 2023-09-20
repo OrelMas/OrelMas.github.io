@@ -84,6 +84,7 @@ require_once('db.php');
         Si le nom de la personne est déja existant il n'y pas possible d'être intégrer                
      -->
      
+     
      <form action2="traitement php" method="post" >
     
      <label for="nom">Nom</label>
