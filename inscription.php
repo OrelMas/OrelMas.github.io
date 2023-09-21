@@ -27,7 +27,13 @@ require_once('../../function/db.php')
     </form>
     <?php
         if (isset($_POST) && !empty($_POST)) {
-            
+             $insert = $bdd->prepare('INSERT INTO atm(prenom, nom, username, code) VALUES (?, ?, ?, ?)');
+            $insert->execute(array(
+                $_POST['name'],
+                $_POST['lastname'],
+                $_POST['username'],
+                $_POST['password']
+            ))
         }
     ?>
 </body>
