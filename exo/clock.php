@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hologe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://localhost/cours_php/OrelMas.github.io/style/style.css">
 </head>
 <body>
  

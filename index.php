@@ -304,5 +304,6 @@ if ($tab_exo['jambe'] == 0 && !$tab_exo['bras'])
         $newmessage->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']));
 }
 ?>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

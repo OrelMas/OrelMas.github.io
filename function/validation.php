@@ -19,6 +19,7 @@ $insert->execute(array(
     md5($_POST['password']),
     $_POST['gender']
 ));
+// $_GET['haninox']
     header('Location:index.php');
 
 }

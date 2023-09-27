@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau JO</title>
-    <link rel="stylesheet" href="tableauJO.css">
+    <link rel="stylesheet" href="http://localhost/cours_php/OrelMas.github.io/style/tableauJO.css">
 </head>
 <body>
     <div class="pixel"></div>
@@ -17,14 +17,14 @@
         <tbody>
             <tr>
                 <th colspan=3>Pays</th>
-                <th colspan=1><img src="or.png" alt="or"></th>
-                <th colspan=1><img src="total.png" alt="argent"></th>
-                <th colspan=1><img src="bronze.png" alt="bronze"></th>
-                <th colspan=1><img src="total2.png" alt="total"></th>
+                <th colspan=1><img src="http://localhost/cours_php/OrelMas.github.io/img/or.png" alt="or"></th>
+                <th colspan=1><img src="http://localhost/cours_php/OrelMas.github.io/img/total.png" alt="argent"></th>
+                <th colspan=1><img src="http://localhost/cours_php/OrelMas.github.io/img/bronze.png" alt="bronze"></th>
+                <th colspan=1><img src="http://localhost/cours_php/OrelMas.github.io/img/total2.png" alt="total"></th>
             </tr>
             <tr>
                 <th>1</th>
-                <td class="drapeau"><img src="usa.png" alt="Drapeau USA"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/usa.png" alt="Drapeau USA"></td>
                 <td colspan=1>USA</td>
                 <td>46</td>
                 <td>37</td>
@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <th>2</th>
-                <td class="drapeau"><img src="grande_bretagne.png" alt="Drapeau Grande Bretagne"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/grande_bretagne.png" alt="Drapeau Grande Bretagne"></td>
                 <td colspan=1>Grande-Bretagne</td>
                 <td>27</td>
                 <td>23</td>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <th>3</th>
-                <td class="drapeau"><img src="chine.png" alt="Drapeau Chine"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/chine.png" alt="Drapeau Chine"></td>
                 <td colspan=1>Chine</td>
                 <td>26</td>
                 <td>18</td>
@@ -51,7 +51,7 @@
             </tr>
             <tr>
                 <th>4</th>
-                <td class="drapeau"><img src="russie.png" alt="Drapeau Russie"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/russie.png" alt="Drapeau Russie"></td>
                 <td colspan=1>Russie</td>
                 <td>19</td>
                 <td>18</td>
@@ -60,7 +60,7 @@
             </tr>
             <tr>
                 <th>5</th>
-                <td class="drapeau"><img src="allemagne.png" alt="Drapeau Allemagne"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/allemagne.png" alt="Drapeau Allemagne"></td>
                 <td colspan=1>Allemagne</td>
                 <td>17</td>
                 <td>10</td>
@@ -69,7 +69,7 @@
             </tr>
             <tr>
                 <th>6</th>
-                <td class="drapeau"><img src="japon.png" alt="Drapeau Japon"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/japon.png" alt="Drapeau Japon"></td>
                 <td colspan=1>Japon</td>
                 <td>12</td>
                 <td>8</td>
@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <th>7</th>
-                <td class="drapeau"><img src="france.png" alt="Drapeau France"></td>
+                <td class="drapeau"><img src="http://localhost/cours_php/OrelMas.github.io/img/france.png" alt="Drapeau France"></td>
                 <td colspan=1>France</td>
                 <td>10</td>
                 <td>18</td>

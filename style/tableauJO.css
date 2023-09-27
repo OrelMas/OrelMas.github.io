@@ -59,12 +59,3 @@ table tbody tr:hover td:last-child {
     color: blue;
 }
 
-
-.pixel {
-    position: absolute;
-    width: 10px;
-    height: 1px;
-    background-color: black;
-    left: 127px;
-    top: 97.5px;
-}
