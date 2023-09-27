@@ -36,6 +36,7 @@ require_once('./mail.php')
             SendEmail($select[0]['id'], $token, $_POST['email']);
     }
     
+    
 }
       
     
