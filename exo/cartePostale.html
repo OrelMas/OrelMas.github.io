@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cartePostale.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <title>Carte Postale</title>
+</head>
+<body>
+    <div class="card">
+        <div class="texte"><p id="texte"> Je fais mon texte que je veux montrer sur ma carte postale de la Parisienne.</p></div>
+        <div id="timbre">
+            <img src="img/timbre.png" alt="timbre">
+        </div>
+        <img src="img/tampon.png" alt="Tampon">
+        <p id="tampon"><script>var date = new Date; document.write(`${date.getDate() < 10 ? '0': ''}`, date.getDate(), "/", `${date.getMonth() < 10 ? '0': ''}`, date.getMonth()+1, "/", `${date.getFullYear() < 10 ? '0': ''}`, date.getFullYear());</script></p>
+        <img src="img/obliteration.png" alt="obliteration">
+        <div id="separateur"></div>
+        <div id="ligne">
+            <p>Anthony Dagognet</p>
+            <p>Pied de la tour Eiffel</p>
+            <p>72007 Paris</p>
+            <p>France</p>
+        </div>
+        <div id="copyright">
+            <address>© | La Carte Parisienne Tel : <a href="#">03.82.47.10.53</a> </address>
+        </div>
+    </div>
+</body>
+</html>
