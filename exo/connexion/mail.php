@@ -1,6 +1,7 @@
 <?php
 
 require "./PHPMailer/PHPMailerAutoload.php";
+
 /** 
  * Cette fonction créer un token unique
  * @param int $length
@@ -11,7 +12,6 @@ function GenerateToken($length) { // 10
     return substr(str_shuffle(str_repeat($token, $length)), 0, $length);
 }
 
-
 /**
  * Fonction envoie de mail
  * @param string $email
@@ -20,12 +20,12 @@ function GenerateToken($length) { // 10
  * @param string $name
  * @return void
  */
-
-function SendEmail($token, $email, $msg, $objet, $name) {
+function SendEmail($email, $msg, $objet, $name) {
     $from = 'dwwm.auboue@hotmail.com';
 
     $mail = new PHPMailer();        
 
+    $mail->SMTPDebug = 2;
     $mail->isSMTP();
     $mail->SMTPAuth = true;
 

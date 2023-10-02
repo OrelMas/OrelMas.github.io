@@ -21,5 +21,19 @@ if (isset($_GET) && !empty($_GET)) {
 <body>
     <form action="" method="post">
         <input type="submit" value="Confirmer">
-    </form></body>
+    </form>
+    <?php 
+    if (isset($_POST) && !empty($_POST)) {
+        $update = $bdd->prepare("UPDATE users SET token=NULL, confirm=1 WHERE token=?");
+        $update->execute(array(
+            $_GET['token']
+        ));
+        $update = $update->rowCount();
+        if ($update > 0) header('Location: login.php');
+        else echo '<script> alert("T\'es nul ta pas réussi !") </script>'
+    }
+    ?>
+
+
+</body>
 </html>
