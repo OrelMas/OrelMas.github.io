@@ -1,0 +1,13 @@
+nav  {
+    background-color: blue;
+    position:fixed;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  div li {
+    justify-content: center;
+    align-items: center;
+  }

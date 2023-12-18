@@ -30,7 +30,7 @@ if (isset($_GET) && !empty($_GET)) {
         ));
         $update = $update->rowCount();
         if ($update > 0) header('Location: login.php');
-        else echo '<script> alert("T\'es nul ta pas réussi !") </script>'
+        else echo '<script> alert("T\'es nul ta pas réussi !") </script>';
     }
     ?>
 

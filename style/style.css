@@ -372,50 +372,43 @@ img:hover {
         letter-spacing: 10px;
         font-size: 9em;
         position: absolute;
+        font-family: keyboard;
+        color: rgba(0, 0, 0, 0.4);
+        background-image: -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0, #f22), 
+            color-stop(0.15, #f2f), 
+            color-stop(0.3, #22f), 
+            color-stop(0.45, #2ff), 
+            color-stop(0.6, #2f2), 
+            color-stop(0.75, #2f2), 
+            color-stop(0.9, #ff2), 
+            color-stop(1, #f22)
+        );
+        border-radius: 15px;
         height: 116px;
         left: 50%;
-        transform: translateX(-50%);
-
+        top: 100px;
+        transform: translateX(-61%);
     }
-
-
-    tr, td, th, table {
-        border: 1px solid red;
-        border-radius: 15px;
-        border-spacing: 0px;
     
+    input[type='number'] {
+        width: 50%;
+        font-size: 1.5em; 
+        border: none;
+        background: none;
+        outline: none;
+        -moz-appearance: textfield;
     }
-
-
-
-
-
-.Container {
-    font-family: 'Times New Roman', Times, serif;
-    border: solid black;
-    background-color:rgb(214, 187, 187);
-    opacity: 40%;
-    height: 150px;
-    width: 150px;
     
-}
-
-
-
-
-
-.ecran  {
-
-    
-}
-
-.touches    {
-
-    
-    border-color: black;
-    align-items: stretch;
-
-
-
-
-}
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 23%;
+        font-size: 2em;
+    }
+    form label {
+        line-height: 10px;
+    }

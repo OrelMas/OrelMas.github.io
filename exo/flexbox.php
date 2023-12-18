@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     
     <title>Cours FlexBox</title>
-    <link rel="stylesheet" href="http://localhost/cours_php/OrelMas.github.io/style/style.css">style/style.css
+    <link rel="stylesheet" href="http://localhost/cours_php/OrelMas.github.io/style/style.css">
     
 </head>
 <body>

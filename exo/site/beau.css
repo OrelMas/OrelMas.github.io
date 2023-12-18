@@ -1,0 +1,92 @@
+body {
+    background-color:white;
+
+
+}
+span {
+    color: white;
+    display:flex;
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: start;
+    
+   
+}
+.soft {
+    
+    background-color: red;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    justify-content: space-between ;
+    align-items: center;
+    padding: 5 20px 5 20px
+}
+.soft a {
+    list-style-type: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    height: auto;
+    justify-content: space-around;
+}
+.soft ul li  {
+    display: inline-block;
+    margin-left: 10px;
+   
+    
+}
+button {
+background-color: black;
+color: aliceblue;
+text-align: center;
+vertical-align: middle;
+
+}
+.soft ul li a {
+    /*display: flex;*/
+   /* align-items: center;*/
+    text-decoration: none;
+    color: white
+}
+.soft .beau {
+    text-align: center;
+    display:flex;
+    background:black;
+    border:black;
+    color: white;
+    font-weight: bolder;
+    padding: 5px 35px 5px 35px
+}
+li {
+    text-decoration: none;
+    display: none;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+
+h5{
+    text-align: center;
+    color:aliceblue
+}
+#slide li {
+
+    text-align: center;
+}
+#slide li a {
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width: 700px){
+    .soft ul {
+        display: none;
+    }
+    .soft button {
+        display: none;
+    }
+
+    box-icon[name='menu'] {
+        display: inline;
+        margin: 10px 0 10px 0;
+        cursor: pointer;
+    }
+}
